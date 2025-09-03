@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Programming Quiz</title>
+  <!-- Link CSS File -->
+  <link rel="stylesheet" href="quiz_css.css">
+</head>
+<body>
+
+<div class="container">
+  <h1>Programming Quiz</h1>
+  
+  <!-- Language Selection -->
+  <div id="languageSelect">
+    <h2>Select a Language</h2>
+    <button class="btn" onclick="startQuiz('c')">C Language</button>
+    <button class="btn" onclick="startQuiz('java')">Java</button>
+    <button class="btn" onclick="startQuiz('python')">Python</button>
+  </div>
+  
+  <!-- Quiz Section -->
+  <form id="quiz"></form>
+  
+  <!-- Result Section -->
+  <div id="result">
+    <h2>Your Score: <span id="score"></span> / 20</h2>
+    <p class="message" id="message"></p>
+    <div id="userAnswers"></div>
+    <button class="btn" onclick="showAnswers()">Show Correct Answers</button>
+    <button class="btn" onclick="location.reload()">Restart Quiz</button>
+  </div>
+
+  <!-- Answers Section -->
+  <div id="answersSection">
+    <h2>Correct Answers</h2>
+    <div id="answersList"></div>
+  </div>
+</div>
+
+<!-- Sound Effects -->
+<audio id="correctSound" src="https://actions.google.com/sounds/v1/cartoon/clang_and_wobble.ogg"></audio>
+<audio id="wrongSound" src="https://actions.google.com/sounds/v1/cartoon/wood_plank_flicks.ogg"></audio>
+<audio id="submitSound" src="https://actions.google.com/sounds/v1/cartoon/concussive_drum_hit.ogg"></audio>
+
+<!-- Link JavaScript File -->
+<script src="quiz_js.js"></script>
+
+</body>
+</html>
